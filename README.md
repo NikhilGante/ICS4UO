@@ -1,1 +1,2 @@
 # ICS4UO
+Grade 12 Computer Science Java projects - notably an Employee Management System (EMS) created using swing GUI API in Netbeans + data structure implementations (stacks, queues, linked lists, binary tree, hash tables, etc.)

@@ -109,6 +109,11 @@ public class Main_jFrame extends javax.swing.JFrame {
         });
 
         getEmpInfoBtn.setText("Get Employee Info");
+        getEmpInfoBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                getEmpInfoBtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -207,11 +212,16 @@ public class Main_jFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_removeEmpBtnMouseClicked
 
     private void removeEmpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeEmpBtnActionPerformed
-        // TODO add your handling code here:
         RemoveEmployeejFrame theRemoveEmpJFrame = new RemoveEmployeejFrame();
         theRemoveEmpJFrame.setVisible(true);
         theRemoveEmpJFrame.setMainHT(theHT);
     }//GEN-LAST:event_removeEmpBtnActionPerformed
+
+    private void getEmpInfoBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_getEmpInfoBtnActionPerformed
+        GetEmployeeInfo_jFrame GetEmployeeInfo_jFrame = new GetEmployeeInfo_jFrame();
+        GetEmployeeInfo_jFrame.setVisible(true);
+        GetEmployeeInfo_jFrame.setMainHT(theHT);
+    }//GEN-LAST:event_getEmpInfoBtnActionPerformed
 
     
     
@@ -226,7 +236,7 @@ public class Main_jFrame extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("FlatLaf Dark".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
