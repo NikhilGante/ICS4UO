@@ -16,11 +16,11 @@ public class PTE extends EmployeeInfo {
     
     
     public double hourlyWage;
-    public double hoursPerWeek;
-    public double weeksPerYear;
+    public int hoursPerWeek;
+    public int weeksPerYear;
     
     
-    public PTE(int eN, String fN, String lN, int g, int wL, double dR, double hW, double hPW, double wPY) {       
+    public PTE(int eN, String fN, String lN, int g, int wL, double dR, double hW, int hPW, int wPY) {       
         
         super(eN, fN, lN, g, wL, dR);
         hourlyWage = hW;

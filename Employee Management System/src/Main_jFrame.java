@@ -156,24 +156,9 @@ public class Main_jFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void editEmpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editEmpBtnActionPerformed
-        // TODO add your handling code here:
-        
-       
-        FTE theFTE;
-        PTE thePTE;
-        
-        theFTE = new FTE(111111, "Elmer", "Fudd", 0, 3, 0.2, 80000.00);
-        theHT.addEmployee(theFTE);
-        System.out.println("Added the FTE to the hash table!");
-                
-        thePTE = new PTE(222222, "Daffy", "Duck", 0, 2, 0.22, 10.0, 20.0, 30.0);
-        theHT.addEmployee(thePTE);
-        System.out.println("Added the PTE to the hash table!");
-                
-        theFTE = new FTE(333333, "Lola", "Bunny", 1, 5, 0.17, 90000.00);
-        theHT.addEmployee(theFTE);
-        System.out.println("Added the FTE to the hash table!");
-
+        EditEmployeeInfo_jFrame theEEIFrame = new EditEmployeeInfo_jFrame();
+        theEEIFrame.setVisible(true);
+        theEEIFrame.setMainHT(theHT);
     }//GEN-LAST:event_editEmpBtnActionPerformed
 
     private void displayEmpsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_displayEmpsBtnActionPerformed
@@ -185,7 +170,6 @@ public class Main_jFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_displayEmpsBtnActionPerformed
 
     private void pressed_addEmpBtn(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pressed_addEmpBtn
-        // TODO add your handling code here:
         AddNewEmployee_jFrame theANEJFrame = new AddNewEmployee_jFrame();
         theANEJFrame.setVisible(true);
         theANEJFrame.setMainHT(theHT);

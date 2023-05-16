@@ -24,45 +24,60 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="empNumField" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel2" min="-2" pref="80" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="firstNameLabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="NAILabel" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel10" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="empTypeLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lastNameLabel" min="-2" max="-2" attributes="0"/>
+                                  <Component id="deductRateLabel" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="empTypeLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="lastNameLabel" min="-2" max="-2" attributes="0"/>
-                          <Component id="firstNameLabel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="FTEInternalFrame" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="empNumField" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel2" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="resultLabel" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="getEmpInfoBtn" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
               </Group>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="resultLabel" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
                       <EmptySpace max="32767" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="getEmpInfoBtn" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="152" max="32767" attributes="0"/>
                       <Component id="exitBtn" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="PTEInternalFrame" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="68" max="32767" attributes="0"/>
                   </Group>
               </Group>
           </Group>
@@ -70,35 +85,57 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="empNumField" alignment="3" min="-2" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="empNumField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="firstNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="lastNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="empTypeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel10" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="deductRateLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="NAILabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="PTEInternalFrame" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="1" attributes="0">
+                      <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
+                      <Component id="FTEInternalFrame" min="-2" max="-2" attributes="0"/>
+                  </Group>
               </Group>
-              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="firstNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lastNameLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="empTypeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace pref="80" max="32767" attributes="0"/>
+              <EmptySpace pref="24" max="32767" attributes="0"/>
+              <Component id="resultLabel" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="getEmpInfoBtn" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="exitBtn" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="resultLabel" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="70" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -163,6 +200,148 @@
     <Component class="javax.swing.JLabel" name="resultLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="jLabel5"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JInternalFrame" name="FTEInternalFrame">
+      <Properties>
+        <Property name="visible" type="boolean" value="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="salaryLabel" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="116" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="salaryLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="134" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Salary"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="salaryLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel9"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JInternalFrame" name="PTEInternalFrame">
+      <Properties>
+        <Property name="visible" type="boolean" value="true"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                          <Component id="jLabel8" alignment="1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel7" alignment="1" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="hourlyWageLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="hoursPerWeekLabel" min="-2" max="-2" attributes="0"/>
+                      <Component id="weeksPerYearLabel" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="0" pref="41" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="hourlyWageLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="hoursPerWeekLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel8" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="weeksPerYearLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="42" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="jLabel6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Hourly wage"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel7">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Hours per week"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel8">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Weeks per year"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="hourlyWageLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel9"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="hoursPerWeekLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel10"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="weeksPerYearLabel">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="jLabel11"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="jLabel9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Net Annual Income"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="NAILabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel10"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel10">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Deduct Rate"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="deductRateLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="      "/>
       </Properties>
     </Component>
   </SubComponents>

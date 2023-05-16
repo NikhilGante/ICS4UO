@@ -22,7 +22,17 @@ public class GetEmployeeInfo_jFrame extends javax.swing.JFrame {
         empNumField.setPreferredSize(Main_jFrame.TEXT_FIELD_DIMENSION);
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
+        salaryLabel.setText("");
+        hourlyWageLabel.setText("");
+        hoursPerWeekLabel.setText("");
+        weeksPerYearLabel.setText("");
+        NAILabel.setText("");
+        
         pack();
+
+        FTEInternalFrame.setVisible(false);
+        PTEInternalFrame.setVisible(false);
+        
     }
 
             
@@ -50,6 +60,20 @@ public class GetEmployeeInfo_jFrame extends javax.swing.JFrame {
         lastNameLabel = new javax.swing.JLabel();
         empTypeLabel = new javax.swing.JLabel();
         resultLabel = new javax.swing.JLabel();
+        FTEInternalFrame = new javax.swing.JInternalFrame();
+        jLabel5 = new javax.swing.JLabel();
+        salaryLabel = new javax.swing.JLabel();
+        PTEInternalFrame = new javax.swing.JInternalFrame();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        hourlyWageLabel = new javax.swing.JLabel();
+        hoursPerWeekLabel = new javax.swing.JLabel();
+        weeksPerYearLabel = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        NAILabel = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        deductRateLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -89,69 +113,177 @@ public class GetEmployeeInfo_jFrame extends javax.swing.JFrame {
 
         resultLabel.setText("jLabel5");
 
+        FTEInternalFrame.setVisible(true);
+
+        jLabel5.setText("Salary");
+
+        salaryLabel.setText("jLabel9");
+
+        javax.swing.GroupLayout FTEInternalFrameLayout = new javax.swing.GroupLayout(FTEInternalFrame.getContentPane());
+        FTEInternalFrame.getContentPane().setLayout(FTEInternalFrameLayout);
+        FTEInternalFrameLayout.setHorizontalGroup(
+            FTEInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FTEInternalFrameLayout.createSequentialGroup()
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(salaryLabel)
+                .addGap(0, 116, Short.MAX_VALUE))
+        );
+        FTEInternalFrameLayout.setVerticalGroup(
+            FTEInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(FTEInternalFrameLayout.createSequentialGroup()
+                .addGroup(FTEInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(salaryLabel))
+                .addGap(0, 134, Short.MAX_VALUE))
+        );
+
+        PTEInternalFrame.setVisible(true);
+
+        jLabel6.setText("Hourly wage");
+
+        jLabel7.setText("Hours per week");
+
+        jLabel8.setText("Weeks per year");
+
+        hourlyWageLabel.setText("jLabel9");
+
+        hoursPerWeekLabel.setText("jLabel10");
+
+        weeksPerYearLabel.setText("jLabel11");
+
+        javax.swing.GroupLayout PTEInternalFrameLayout = new javax.swing.GroupLayout(PTEInternalFrame.getContentPane());
+        PTEInternalFrame.getContentPane().setLayout(PTEInternalFrameLayout);
+        PTEInternalFrameLayout.setHorizontalGroup(
+            PTEInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PTEInternalFrameLayout.createSequentialGroup()
+                .addGroup(PTEInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PTEInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(jLabel8)
+                        .addComponent(jLabel7))
+                    .addComponent(jLabel6))
+                .addGap(18, 18, 18)
+                .addGroup(PTEInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(hourlyWageLabel)
+                    .addComponent(hoursPerWeekLabel)
+                    .addComponent(weeksPerYearLabel))
+                .addGap(0, 41, Short.MAX_VALUE))
+        );
+        PTEInternalFrameLayout.setVerticalGroup(
+            PTEInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PTEInternalFrameLayout.createSequentialGroup()
+                .addGroup(PTEInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(hourlyWageLabel))
+                .addGap(31, 31, 31)
+                .addGroup(PTEInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(hoursPerWeekLabel))
+                .addGap(32, 32, 32)
+                .addGroup(PTEInternalFrameLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(weeksPerYearLabel))
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+
+        jLabel9.setText("Net Annual Income");
+
+        NAILabel.setText("jLabel10");
+
+        jLabel10.setText("Deduct Rate");
+
+        deductRateLabel.setText("      ");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel4))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(empNumField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(firstNameLabel))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(NAILabel))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel10))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(empTypeLabel)
+                                    .addComponent(lastNameLabel)
+                                    .addComponent(deductRateLabel))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(FTEInternalFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(resultLabel)
+                            .addComponent(getEmpInfoBtn))))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(empTypeLabel)
-                            .addComponent(lastNameLabel)
-                            .addComponent(firstNameLabel))
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(empNumField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(resultLabel)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(getEmpInfoBtn)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 152, Short.MAX_VALUE)
                         .addComponent(exitBtn)
-                        .addGap(17, 17, 17))))
+                        .addGap(17, 17, 17))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(PTEInternalFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(68, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(empNumField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(firstNameLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(lastNameLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(empTypeLabel))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(empNumField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(firstNameLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(lastNameLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(empTypeLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(deductRateLabel))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(NAILabel)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(PTEInternalFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(FTEInternalFrame, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                .addComponent(resultLabel)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(getEmpInfoBtn)
                     .addComponent(exitBtn))
-                .addGap(18, 18, 18)
-                .addComponent(resultLabel)
-                .addGap(36, 36, 36))
+                .addGap(70, 70, 70))
         );
 
         pack();
@@ -186,9 +318,30 @@ public class GetEmployeeInfo_jFrame extends javax.swing.JFrame {
         }
         firstNameLabel.setText(theEmp.firstName);
         lastNameLabel.setText(theEmp.lastName);
-        
-        if(theEmp instanceof FTE)   empTypeLabel.setText("Full Time Employee");
-        else    empTypeLabel.setText("Part Time Employee");
+        deductRateLabel.setText(String.valueOf(theEmp.deductRate*100) + "%");
+
+        NAILabel.setText("$" + String.format("%.2f", theEmp.calcNetAnnualIncome()));
+        if(theEmp instanceof FTE){
+            FTE theFTE = (FTE)theEmp;   // Casts object of super class in subclass FTE
+            empTypeLabel.setText("Full Time Employee");
+            FTEInternalFrame.setVisible(true);
+            PTEInternalFrame.setVisible(false);
+            
+            salaryLabel.setText("$" + String.valueOf(theFTE.yearlySalary));
+        }
+        else{
+            PTE thePTE = (PTE)theEmp;   // Casts object of super class in subclass FTE
+
+            empTypeLabel.setText("Part Time Employee");
+            FTEInternalFrame.setVisible(false);
+            PTEInternalFrame.setVisible(true);
+            
+            hourlyWageLabel.setText("$" + String.valueOf(thePTE.hourlyWage));
+            hoursPerWeekLabel.setText(String.valueOf(thePTE.hoursPerWeek));
+            weeksPerYearLabel.setText(String.valueOf(thePTE.weeksPerYear));
+
+
+        }
        
     }//GEN-LAST:event_getEmpInfoBtnActionPerformed
 
@@ -229,16 +382,30 @@ public class GetEmployeeInfo_jFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JInternalFrame FTEInternalFrame;
+    private javax.swing.JLabel NAILabel;
+    private javax.swing.JInternalFrame PTEInternalFrame;
+    private javax.swing.JLabel deductRateLabel;
     private javax.swing.JTextField empNumField;
     private javax.swing.JLabel empTypeLabel;
     private javax.swing.JButton exitBtn;
     private javax.swing.JLabel firstNameLabel;
     private javax.swing.JButton getEmpInfoBtn;
+    private javax.swing.JLabel hourlyWageLabel;
+    private javax.swing.JLabel hoursPerWeekLabel;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel lastNameLabel;
     private javax.swing.JLabel resultLabel;
+    private javax.swing.JLabel salaryLabel;
+    private javax.swing.JLabel weeksPerYearLabel;
     // End of variables declaration//GEN-END:variables
 }

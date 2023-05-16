@@ -158,8 +158,8 @@ public class DisplayAllEmps_jFrame extends javax.swing.JFrame {
                     if (theEmp instanceof PTE) {
                         PTE thePTE = (PTE) theEmp;
                         System.out.println("    That employee has hourly wage $" + Double.toString(thePTE.hourlyWage));
-                        System.out.println("    That employee has hours per week " + Double.toString(thePTE.hoursPerWeek));
-                        System.out.println("    That employee has weeks per year " + Double.toString(thePTE.weeksPerYear));
+                        System.out.println("    That employee has hours per week " + Integer.toString(thePTE.hoursPerWeek));
+                        System.out.println("    That employee has weeks per year " + Integer.toString(thePTE.weeksPerYear));
                         
                         model.setValueAt("Part Time", empCounter, 0);
                         model.setValueAt(theEmp.getEmpNum(), empCounter, 1);

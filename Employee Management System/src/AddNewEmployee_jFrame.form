@@ -27,45 +27,54 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-              </Group>
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="resultLabel" pref="276" max="32767" attributes="0"/>
               <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="empNumField" min="-2" pref="60" max="-2" attributes="0"/>
-                      <Component id="jTextField3" alignment="1" min="-2" pref="60" max="-2" attributes="0"/>
+              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
+              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="264" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="empNumField" min="-2" pref="60" max="-2" attributes="0"/>
+                              <Component id="jTextField3" alignment="1" min="-2" pref="60" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="jTextField2" min="-2" pref="60" max="-2" attributes="0"/>
+                      </Group>
                   </Group>
-                  <Component id="jTextField2" min="-2" pref="60" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="deductRateField" min="-2" pref="60" max="-2" attributes="0"/>
+                  </Group>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Component id="jInternalFrame1" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jInternalFrame2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jRadioButton1" max="32767" attributes="0"/>
                       <EmptySpace min="2" pref="2" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="jRadioButton2" pref="105" max="32767" attributes="0"/>
+                      <Component id="jRadioButton2" pref="125" max="32767" attributes="0"/>
                       <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="-2" max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="0" attributes="0">
-              <Component id="jLabel4" pref="265" max="32767" attributes="0"/>
-              <EmptySpace type="unrelated" min="-2" max="-2" attributes="0"/>
-              <Component id="jButton1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="93" max="-2" attributes="0"/>
-              <Component id="jButton2" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="264" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -105,13 +114,18 @@
                           </Group>
                           <Component id="jInternalFrame2" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="182" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="jLabel9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="deductRateField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace pref="133" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="7" pref="7" max="-2" attributes="0"/>
-                      <Component id="jLabel4" max="32767" attributes="0"/>
+                      <Component id="resultLabel" max="32767" attributes="0"/>
                   </Group>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -170,7 +184,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addTheNewEmployee"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JLabel" name="jLabel4">
+    <Component class="javax.swing.JLabel" name="resultLabel">
       <Properties>
         <Property name="text" type="java.lang.String" value="Employee added!"/>
       </Properties>
@@ -323,5 +337,17 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="javax.swing.JLabel" name="jLabel9">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Deduct Rate"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="deductRateField">
+      <Properties>
+        <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+          <Dimension value="[60, 20]"/>
+        </Property>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>
