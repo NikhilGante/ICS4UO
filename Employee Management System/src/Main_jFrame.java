@@ -1,4 +1,6 @@
 import java.awt.Dimension;
+import java.io.*;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -7,7 +9,7 @@ import java.awt.Dimension;
 
 /**
  *
- * @author P0068839
+ * @author 685595
  */
 public class Main_jFrame extends javax.swing.JFrame {
     
@@ -16,7 +18,7 @@ public class Main_jFrame extends javax.swing.JFrame {
     
     // UTIL
     static final Dimension TEXT_FIELD_DIMENSION = new Dimension (60, 28);
-    
+    static final String G_LOOK_AND_FEEL = "FlatLaf Light";
     // END OF UTIL
     
     // CONSTRUCTORS
@@ -26,8 +28,19 @@ public class Main_jFrame extends javax.swing.JFrame {
     public Main_jFrame() {
         initComponents();
         
+        // Saves Emp info upon close
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            @Override
+            public void windowClosing(java.awt.event.WindowEvent event) {
+                saveEmps();
+                dispose();
+                System.exit(0);
+            }
+        });
+        
         theHT = new MyHashTable(10);
-        System.out.println("HERE HERE");
+        loadEmps();
         
     }
     
@@ -49,6 +62,7 @@ public class Main_jFrame extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         jButton1 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
         editEmpBtn = new javax.swing.JButton();
         displayEmpsBtn = new javax.swing.JButton();
         addEmpBtn = new javax.swing.JButton();
@@ -59,6 +73,8 @@ public class Main_jFrame extends javax.swing.JFrame {
 
         jButton1.setText("jButton1");
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         editEmpBtn.setText("Edit Employee");
@@ -68,7 +84,7 @@ public class Main_jFrame extends javax.swing.JFrame {
             }
         });
 
-        displayEmpsBtn.setText("Display all employees");
+        displayEmpsBtn.setText("Display All Employees");
         displayEmpsBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 displayEmpsBtnActionPerformed(evt);
@@ -130,7 +146,7 @@ public class Main_jFrame extends javax.swing.JFrame {
                     .addComponent(editEmpBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(addEmpBtn, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(getEmpInfoBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 150, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 149, Short.MAX_VALUE)
                 .addComponent(loadEmpsBtn))
         );
         layout.setVerticalGroup(
@@ -176,19 +192,11 @@ public class Main_jFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_pressed_addEmpBtn
 
     private void saveEmpsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveEmpsBtnActionPerformed
-        // TODO add your handling code here:
-        
-        // Here, I need code that walks through the entire hash table
-        // and writes the attribute values for each employee to a
-        // text file (by using say buffered writer).
+        saveEmps();
     }//GEN-LAST:event_saveEmpsBtnActionPerformed
 
     private void loadEmpsBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loadEmpsBtnActionPerformed
-        // TODO add your handling code here:
-        
-        // Here, I need code that reads the attribute values for the employee
-        // data stored in a text file (by say using buffered reader) and adding
-        // each of those employees to the hash table.
+        loadEmps();
     }//GEN-LAST:event_loadEmpsBtnActionPerformed
 
     private void removeEmpBtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_removeEmpBtnMouseClicked
@@ -207,7 +215,120 @@ public class Main_jFrame extends javax.swing.JFrame {
         GetEmployeeInfo_jFrame.setMainHT(theHT);
     }//GEN-LAST:event_getEmpInfoBtnActionPerformed
 
+    private void loadEmps(){
+        BufferedReader br = null;
+        try {
+            File textfile = new File("myfile.txt");
+
+            if (!textfile.exists()) textfile.createNewFile();
+            
+            br = new BufferedReader(new FileReader(textfile));
+            String empNumStr;
+            while((empNumStr = br.readLine()) != null){
+                int empNum = Integer.parseInt(empNumStr);
+                
+                String firstName = br.readLine();
+                String lastName = br.readLine();
+                
+                double deductRate = Double.parseDouble(br.readLine());
+                
+                if(br.readLine().equals("FTE")){
+                    double salary = Double.parseDouble(br.readLine());
+                    theHT.addEmployee(new FTE(empNum, firstName, lastName, 0, 0, deductRate, salary));
+                }
+                else{
+                    double hourlyWage = Double.parseDouble(br.readLine());
+                    int hoursPerWeek = Integer.parseInt(br.readLine());
+                    int weeksPerYear = Integer.parseInt(br.readLine());
+                    
+                    theHT.addEmployee(new PTE(empNum, firstName, lastName, 0, 0, deductRate, hourlyWage, hoursPerWeek, weeksPerYear));
+
+                }
+                        
+                        
+            }
+            
+        } catch (IOException ioe) {
+	   ioe.printStackTrace();
+	}
+	finally
+	{ 
+            try{
+               if(br != null)
+                  br.close();
+            }
+            catch(Exception ex){
+                System.out.println("Error in closing the BufferedReader"+ex);
+            }
+	}
+    }
+    private void saveEmps(){
+                BufferedWriter bw = null;
+        try {
+            File textfile = new File("myfile.txt");
+
+            if (!textfile.exists()) textfile.createNewFile();
+            
+            bw = new BufferedWriter(new FileWriter(textfile));
+            
+            for(int bucketNum = 0; bucketNum < theHT.buckets.length; bucketNum++){
+                for(int i = 0; i < theHT.buckets[bucketNum].size(); i++){
+                    EmployeeInfo theEmp = theHT.buckets[bucketNum].get(i);
+                    
+                    bw.write(String.valueOf(theEmp.empNum));
+                    bw.newLine();
+                    
+                    bw.write(theEmp.firstName);
+                    bw.newLine();
+
+                    bw.write(theEmp.lastName);
+                    bw.newLine();
+                    
+                    bw.write(String.valueOf(theEmp.deductRate));
+                    bw.newLine();
+                    
+                    if(theEmp instanceof FTE){
+                        FTE theFTE = (FTE)theEmp; 
+                        
+                        bw.write("FTE");
+                        bw.newLine();
+                        
+                        bw.write(String.valueOf(theFTE.yearlySalary));
+                        bw.newLine();
+                    }
+                    else{
+                        PTE thePTE = (PTE)theEmp; 
+                        
+                        bw.write("PTE");
+                        bw.newLine();
+                        
+                        bw.write(String.valueOf(thePTE.hourlyWage));
+                        bw.newLine();
+
+                        bw.write(String.valueOf(thePTE.hoursPerWeek));
+                        bw.newLine();
+                                                
+                        bw.write(String.valueOf(thePTE.weeksPerYear));
+                        bw.newLine();
+                    }                    
     
+
+                }
+            }
+        } catch (IOException ioe) {
+	   ioe.printStackTrace();
+	}
+	finally
+	{ 
+            try{
+               if(bw!=null)
+                  bw.close();
+            }
+            catch(Exception ex){
+                System.out.println("Error in closing the BufferedWriter"+ex);
+            }
+	}
+    }
     
     /**
      * @param args the command line arguments
@@ -220,7 +341,7 @@ public class Main_jFrame extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("FlatLaf Dark".equals(info.getName())) {
+                if (G_LOOK_AND_FEEL.equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -254,6 +375,7 @@ public class Main_jFrame extends javax.swing.JFrame {
     private javax.swing.JButton editEmpBtn;
     private javax.swing.JButton getEmpInfoBtn;
     private javax.swing.JButton jButton1;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JButton loadEmpsBtn;
     private javax.swing.JButton removeEmpBtn;
     private javax.swing.JButton saveEmpsBtn;

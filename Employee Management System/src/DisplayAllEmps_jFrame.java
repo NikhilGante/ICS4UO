@@ -26,6 +26,9 @@ public class DisplayAllEmps_jFrame extends javax.swing.JFrame {
      */
     public DisplayAllEmps_jFrame() {
         initComponents();
+        
+        
+        jLabel1.setVisible(false);
         /*
         model.addColumn("Status");
         model.addColumn("Employee Number");
@@ -42,7 +45,6 @@ public class DisplayAllEmps_jFrame extends javax.swing.JFrame {
     
     public void setMainHT(MyHashTable refvalForHT) {
         mainHT = refvalForHT;
-        System.out.println("HERE HERE HERE HERE");
     }
 
     /**
@@ -110,7 +112,8 @@ public class DisplayAllEmps_jFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        jLabel1.setVisible(true);
+
         
         int numInHT = mainHT.getNumInHashTable();
         
@@ -193,7 +196,7 @@ public class DisplayAllEmps_jFrame extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (Main_jFrame.G_LOOK_AND_FEEL.equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }

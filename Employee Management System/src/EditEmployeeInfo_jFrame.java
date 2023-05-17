@@ -9,7 +9,6 @@
  */
 public class EditEmployeeInfo_jFrame extends javax.swing.JFrame {
 
-    
     private MyHashTable mainHT;  // This contains the ref value for theHT of MainJFrame.
 
     /**
@@ -483,7 +482,7 @@ public class EditEmployeeInfo_jFrame extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if (Main_jFrame.G_LOOK_AND_FEEL.equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
